@@ -1,0 +1,30 @@
+# Add synonym to begin
+POST http://localhost:1337/api/v1/synonyms HTTP/1.1
+content-type: application/json
+
+{
+    "word": "begin",
+    "synonym": "start"
+}
+
+###
+# Add synonym to start
+POST http://localhost:1337/api/v1/synonyms HTTP/1.1
+content-type: application/json
+
+{
+    "word": "start",
+    "synonym": "poekhali"
+}
+
+###
+# Get Synonyms for begin
+GET http://localhost:1337/api/v1/word?word=begin HTTP/1.1
+
+###
+# Get Synonyms for start
+GET http://localhost:1337/api/v1/word?word=start HTTP/1.1
+
+###
+# Get Synonyms for poekhali
+GET http://localhost:1337/api/v1/word?word=poekhali HTTP/1.1

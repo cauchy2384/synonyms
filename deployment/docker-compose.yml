@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  synonyms:
+    image: cauchy2384/synonyms:latest
+    env_file:
+      - ./synonyms.env
+    ports:
+      - "1337:8080"
+    working_dir: /app
+    command: /app/synonyms
+    restart: on-failure  
